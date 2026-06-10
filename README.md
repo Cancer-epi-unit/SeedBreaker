@@ -2,6 +2,10 @@
 
 **Predicting germline variant disruption of miRNA binding sites in gene 3′UTRs**
 
+[![HuggingFace](https://img.shields.io/badge/🤗%20Model-c3114203%2Fseedbreaker--lora--v2-yellow)](https://huggingface.co/c3114203/seedbreaker-lora-v2)
+[![GitHub](https://img.shields.io/badge/GitHub-Cancer--epi--unit%2FSeedBreaker-blue)](https://github.com/Cancer-epi-unit/SeedBreaker)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 SeedBreaker is a command-line tool and trained classifier that scores rare germline SNVs for their likelihood of disrupting a microRNA (miRNA) seed-region binding site in a gene 3′UTR. It combines Watson-Crick base-pairing physics with an ESM-2 LoRA deep learning classifier, validated against ClinVar pathogenic variants and gnomAD population controls.
 
 > Known pathogenic 3′UTR variants (ClinVar) are **4.4× enriched** for HIGH-tier SeedBreaker calls versus common population variants (gnomAD v4.1), p = 6.6 × 10⁻⁶.
@@ -96,7 +100,7 @@ Download the trained LoRA adapter from HuggingFace:
 pip install huggingface_hub
 python3 -c "
 from huggingface_hub import snapshot_download
-snapshot_download(repo_id='Cancer-epi-unit/seedbreaker-lora-v2',
+snapshot_download(repo_id='c3114203/seedbreaker-lora-v2',
                   local_dir='models/seedbreaker_lora_v2/best')
 "
 ```
@@ -268,7 +272,7 @@ SeedBreaker/
 ├── download_validation_data.sh  Phase 7 validation data download
 ├── download_gnomad_background.sh gnomAD v4.1 streaming
 ├── score_validation.sh          Validation scoring pipeline
-└── seedbreaker_rag.md           Full project context document
+└── download_tissue_data.sh      GTEx expression matrix download
 ```
 
 ---

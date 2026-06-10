@@ -11,3 +11,4 @@ gnomad.genomes.*.tbi
 launch_training.command
 test_data/
 seedbreaker_rag.md
+hf_model_card.md
