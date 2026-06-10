@@ -1,0 +1,9 @@
+# Large data files
+Pre_data/
+training_data/
+models/
+results/
+__pycache__/
+*.pyc
+.DS_Store
+*.log
