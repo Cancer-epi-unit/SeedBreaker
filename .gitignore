@@ -7,3 +7,6 @@ __pycache__/
 *.pyc
 .DS_Store
 *.log
+gnomad.genomes.*.tbi
+launch_training.command
+test_data/
